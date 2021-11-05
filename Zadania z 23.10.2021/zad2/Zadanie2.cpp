@@ -7,25 +7,40 @@ int main()
     int a;
     int b;
     int c;
+    int d;
+    int e;
 
-    cout << "Podaj piersz¹ liczê" << endl;
+    do{
+    cout << "Podaj piersza licze" << endl;
     cin >> a;
-    cout << "Podaj drug¹ liczê" << endl;
+    cout << "Podaj druga licze" << endl;
     cin >> b;
-    cout << "Podaj trzeci¹ liczê" << endl;
+    cout << "Podaj licze, przez ktora liczby z przedzialu maja byc podzielne" << endl;
     cin >> c;
 
-    for(int i=a;a<b;a++){
-        if (a%c == 0){
-            cout << a << endl;
-        }
+    if(a==b){
+    cout << "Liczby musza byc rozne od siebie" << endl;
+    }
+    }
+    while(a==b);
+
+    if (b>a)
+    {
+        e=b;
+        d=a;
+    }
+    else
+    {
+        e=a;
+        d=b;
     }
 
-    for(int i=b;b<a;b++){
-        if (b%c == 0){
-            cout << b << endl;
+    for (int i=d;d<e;d++)
+    {
+        if(d%c==0){
+        cout << d << endl;
         }
     }
-
     return 0;
 }
+
