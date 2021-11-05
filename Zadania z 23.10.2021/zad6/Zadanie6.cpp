@@ -18,7 +18,9 @@ int main()
     {
         wynik = wynik*x;
         i = i+1;
-    }
+        if(y==0){
+            wynik = 1;
+        }
     while(i<=y);
 
     cout << wynik << endl;
