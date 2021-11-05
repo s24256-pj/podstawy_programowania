@@ -14,7 +14,7 @@ int main()
 
     for(int i=0;i<y;i++)
     {
-        for(int i=0;i<x;i++)
+        for(int i=0;i<(x-1);i++)
     {
         cout << "" << "#";
     }
