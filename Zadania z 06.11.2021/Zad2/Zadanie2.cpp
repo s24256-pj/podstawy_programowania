@@ -5,26 +5,23 @@ using namespace std;
 int main()
 {
     int x;
-    cout << "Podaj ocenê: " << endl;
+    cout << "Podaj ocene od 2 do 5: " << endl;
     cin >> x;
 
-    while(x>5 || x<1){
-        cout << "Podaj ocene od 1 do 5" << endl;
+    while(x>5 || x<2){
+        cout << "Podaj ocene od 2 do 5" << endl;
         cin >> x;
     }
 
         switch(x)
         {
-            case 1:
-                cout << "Niedopuszczaj¹cy" << endl;
-            break;
 
             case 2:
                 cout << "Niedostateczny" << endl;
             break;
 
             case 3:
-                cout << "Dopuszczaj¹cy" << endl;
+                cout << "Dopuszczajacy" << endl;
             break;
 
             case 4:
