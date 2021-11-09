@@ -11,7 +11,7 @@ double max2(int a, int b){
         c=b;
     }
     if(a==b){
-        c = a; // mo¿na te¿ u¿yæ c = b, jest to bez ró¿nicy - wa¿ne, ¿e program zwróci nam c
+        c = a; // mozna tez uzyc c = b, jest to bez rÃ³znicy - wazne, ze program zwrÃ³ci nam c
     }
     return c;
 }
@@ -27,7 +27,7 @@ double max3(int a, int b, int c){
         e = c;
     }
     if (d==c) {
-       e = d; // mo¿na te¿ u¿yæ e = c, jest to bez ró¿nicy
+       e = d; // mozna tez uzyc e = c, jest to bez rÃ³znicy
     }
     return e;
 
