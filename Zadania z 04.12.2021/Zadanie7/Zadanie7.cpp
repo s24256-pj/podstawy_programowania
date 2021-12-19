@@ -50,17 +50,19 @@ void look(int n, int m, int tab[10][10]){
 void zmiana(int n,int m, int tab[10][10]){
     int p,k;
 
-    cout << "Podaj numery kolumn ktore maja zostac zamienione: " << endl;
-    cin >> p;
-    cin >> k;
+    do{
+        cout << "Podaj numery kolumn ktore maja zostac zamienione od 0 do " << m << endl;
+        cin >> p;
+        cin >> k;
+    }while(k>m || p>m);
 
     if(k<p)
         swap(k,p);
 
     for (int i=0;i<n;i++){
             for (int j=0;j<m;j++){
-                if(i==p){
-                    swap(tab[p][j],tab[k][j]);
+                if(j==p){
+                    swap(tab[i][p],tab[i][k]);
                     cout << tab[i][j] << " ";
                 }
                 else
@@ -68,6 +70,8 @@ void zmiana(int n,int m, int tab[10][10]){
             }
             cout << endl;
     }
+
+}
 
 }
 int main()
