@@ -13,7 +13,7 @@ int main()
 
     cout << "Wartosc wskaznika: " << wskaznik << endl;
     cout << "Adres wskaznika: " << &wskaznik << endl;
-    //cout << "Rozmiar wskaznika: " << endl; // niestety nie wiem jak wyswietlic rozmiar wskaznika stringa
+    cout << "Rozmiar wskaznika: " << sizeof(wskaznik) << endl;
 
 
     return 0;

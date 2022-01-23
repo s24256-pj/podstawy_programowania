@@ -3,30 +3,35 @@
 
 using namespace std;
 
-auto fSum(double (*f)(double) , int n, int m)-> double{
-
-    return f(n)+f(m);
-}
-
-
 double fun(double r){
 
     double wynik = 0;
     for (int i =0;i<r;i++){
-        wynik += i;
+        wynik += i*i;
     }
 
-    return wynik;;
+    return wynik;
+}
+
+auto fSum(double (*f)(double) , int n, int m)-> double{
+
+    int suma = 0;
+    f = &fun;
+
+    for (int i=n;i<m;i++){
+        suma += fun(m);
+        cout << suma << endl;
+    }
+
+    return suma;
 }
 
 int main()
 {
-    double x = 10;
-    double y = 3;
+    double x = 5;
+    double y = 10;
 
-    cout << "Wartosc funckji fun(x) = " << fun(x) << endl;
-    cout << "Wartosc funckji fun(y) = " << fun(y) << endl;
-    cout << "Suma wynikow obu funkcji = " << fSum(fun,x,y) << endl;
+    cout << "Suma wynikow = " << fSum(fun,x,y) << endl;
 
     return 0;
 }

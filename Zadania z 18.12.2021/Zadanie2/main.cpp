@@ -10,6 +10,6 @@ int main()
 {
     string x = "Hello, World!";
     string *ws = &x;
-    print(&x);
+    print(ws);
     return 0;
 }

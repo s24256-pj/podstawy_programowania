@@ -2,18 +2,18 @@
 
 using namespace std;
 
-int odwracanie(int n,int T[10]){
+int *odwracanie(int n,int T[10]){
 
-    int *wskT = &T[0];
-    for (int i=0;i<(n-1);i++){
+    int *wskT = T;
+    for (int i=0;i<n;i++){
 
-        if (*(wskT+i) == *(wskT+n-1))
+        if (*(wskT+i)==*(wskT+n-1))
             continue;
 
         swap(*(wskT+i),*(wskT+n-1));
     }
 
-    return T[0];
+    return T;
 }
 int main()
 {
@@ -21,12 +21,15 @@ int main()
     int m = 3;
 
     for (int i=0;i<m;i++){
-        cout << odwracanie(m,A) << " ";
+        cout << *odwracanie(m,A) << " ";
     }
+    cout << endl;
 
-    // odwracanie(m,odwracanie(m,A)); - niestety nie dzia³a mi tutaj funkcja
+    *odwracanie(m,A);
 
-
+    for (int i=0;i<m;i++){
+        cout << *odwracanie(m,odwracanie(m,A)) << " ";
+    }
 
     return 0;
 }
